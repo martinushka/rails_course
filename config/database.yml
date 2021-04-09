@@ -3,19 +3,19 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: Martyn
-  password: Martyn
+  username: postgres4
+  password: 1234
   host: localhost
   port: 5432
 
 development:
   <<: *default
-  database: rails_course_development
+  database: rails_course_development4
 test:
   <<: *default
-  database: rails_course_test
+  database: rails_course_test4
 production:
   <<: *default
-  database: rails_course_production
-  username: rails_course
+  database: rails_course_production4
+  username: rails_course4
   password: <%= ENV['RAILS_COURSE_DATABASE_PASSWORD'] %>
